@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Листья — редкий чай</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="#" class="logo">Листья<span>·</span></a>
+    <nav aria-label="Навигация">
+      <ul class="nav">
+        <li><a href="#">Каталог</a></li>
+        <li><a href="#">Происхождение</a></li>
+        <li><a href="#">Ритуал</a></li>
+        <li><a href="#">О нас</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <button class="cart-btn">Корзина · 0</button>
+    </div>
+  </header>
+
+  <!-- CATALOG -->
+  <main>
+    <section class="catalog" aria-label="Каталог чаёв">
+
+      <div class="catalog-header">
+        <div>
+          <p class="catalog-eyebrow">Сезонная коллекция 2025</p>
+          <h1 class="catalog-title">Редкие<br /><em>первые сборы</em></h1>
+        </div>
+        <div class="catalog-meta">
+          <strong>8</strong>
+          наименований<br />в наличии
+        </div>
+      </div>
+
+      <div class="filters" role="group" aria-label="Фильтры">
+        <button class="filter-btn active">Все</button>
+        <button class="filter-btn">Зелёный</button>
+        <button class="filter-btn">Белый</button>
+        <button class="filter-btn">Улун</button>
+        <button class="filter-btn">Пуэр</button>
+        <button class="filter-btn">Чёрный</button>
+      </div>
+
+      <div class="card-grid">
+
+        <!-- CARD 1 -->
+        <div class="card-wrap" tabindex="0" role="button" aria-label="Dragon Well — подробнее">
+          <div class="card">
+            <article class="card-face card-front">
+              <div class="card-img">
+                <!-- Ilustracja SVG: zielona herbata -->
+                <svg viewBox="0 0 280 340" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                  <rect width="280" height="340" fill="#D4E8C2" />
+                  <ellipse cx="140" cy="180" rx="90" ry="110" fill="#A8CC80" opacity="0.5" />
+                  <path d="M60 320 Q140 140 220 80 Q180 200 130 340Z" fill="#7BA85A" opacity="0.6" />
+                  <path d="M140 60 Q170 120 150 200 Q130 150 100 90Z" fill="#5C8840" opacity="0.7" />
+                  <path d="M80 100 Q130 80 160 140 Q120 130 80 100Z" fill="#4A7233" />
+                  <circle cx="200" cy="80" r="18" fill="#C8D89A" opacity="0.5" />
+                  <circle cx="60" cy="250" r="30" fill="#B8D090" opacity="0.3" />
+                </svg>
+                <span class="card-badge">Новинка</span>
+              </div>
+              <div class="card-info">
+                <p class="card-origin">Китай · Ханчжоу</p>
+                <h2 class="card-name">Dragon Well<br />Лунцзин</h2>
+                <div class="card-row">
+                  <span class="card-price">1 840 ₽</span>
+                  <span class="card-weight">50 г</span>
+                </div>
+              </div>
+            </article>
+            <div class="card-face card-back">
+              <div>
+                <p class="back-tag">Зелёный · Первый сбор</p>
+                <h2 class="back-title">Dragon Well Лунцзин</h2>
+                <p class="back-desc">Императорский чай из деревни Мэйцзяу. Листья вручную обжаривают в воке, придавая им
+                  плоскую форму. Настой прозрачный, светло-золотистый, с долгим сладковатым послевкусием.</p>
+              </div>
+              <div>
+                <div class="back-notes">
+                  <p class="notes-label">Ноты</p>
+                  <div class="notes-tags">
+                    <span class="note-tag">Жареный орех</span>
+                    <span class="note-tag">Бобы эдамамэ</span>
+                    <span class="note-tag">Весенняя трава</span>
+                  </div>
+                </div>
+                <button class="back-btn">Добавить в корзину</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card-wrap" tabindex="0" role="button" aria-label="Silver Needle — подробнее">
+          <div class="card">
+            <article class="card-face card-front">
+              <div class="card-img">
+                <svg viewBox="0 0 280 340" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                  <rect width="280" height="340" fill="#EAE4DC" />
+                  <ellipse cx="140" cy="200" rx="100" ry="120" fill="#D8CFBF" opacity="0.6" />
+                  <line x1="100" y1="320" x2="170" y2="40" stroke="#C4BAA8" stroke-width="3" stroke-linecap="round" />
+                  <line x1="120" y1="320" x2="190" y2="60" stroke="#B8AE9C" stroke-width="2.5" stroke-linecap="round" />
+                  <line x1="80" y1="300" x2="150" y2="50" stroke="#CBBFAE" stroke-width="2" stroke-linecap="round" />
+                  <line x1="140" y1="330" x2="200" y2="80" stroke="#C0B6A4" stroke-width="3" stroke-linecap="round" />
+                  <line x1="160" y1="310" x2="220" y2="100" stroke="#B4AA98" stroke-width="2" stroke-linecap="round" />
+                  <ellipse cx="140" cy="170" rx="70" ry="80" fill="#F0EADE" opacity="0.4" />
+                </svg>
+                <span class="card-badge">Лимитед</span>
+              </div>
+              <div class="card-info">
+                <p class="card-origin">Китай · Фуцзянь</p>
+                <h2 class="card-name">Silver Needle<br />Байхао Иньчжэнь</h2>
+                <div class="card-row">
+                  <span class="card-price">2 650 ₽</span>
+                  <span class="card-weight">25 г</span>
+                </div>
+              </div>
+            </article>
+            <div class="card-face card-back">
+              <div>
+                <p class="back-tag">Белый · Почки</p>
+                <h2 class="back-title">Silver Needle Байхао Иньчжэнь</h2>
+                <p class="back-desc">Только нераскрывшиеся почки сорта Da Bai, собранные в два дня в марте. Покрыты
+                  серебристым пушком. Настой светлый, шёлковый, с ощущением свежести горного воздуха.</p>
+              </div>
+              <div>
+                <div class="back-notes">
+                  <p class="notes-label">Ноты</p>
+                  <div class="notes-tags">
+                    <span class="note-tag">Дыня</span>
+                    <span class="note-tag">Белый персик</span>
+                    <span class="note-tag">Мёд</span>
+                  </div>
+                </div>
+                <button class="back-btn">Добавить в корзину</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card-wrap" tabindex="0" role="button" aria-label="Tie Guan Yin — подробнее">
+          <div class="card">
+            <article class="card-face card-front">
+              <div class="card-img">
+                <svg viewBox="0 0 280 340" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                  <rect width="280" height="340" fill="#D9E8D4" />
+                  <ellipse cx="140" cy="190" rx="110" ry="110" fill="#B4CCB0" opacity="0.5" />
+                  <circle cx="100" cy="160" r="28" fill="#7A9E74" opacity="0.8" />
+                  <circle cx="155" cy="130" r="22" fill="#6A8E64" opacity="0.75" />
+                  <circle cx="130" cy="200" r="32" fill="#88AB82" opacity="0.7" />
+                  <circle cx="175" cy="190" r="20" fill="#7A9E74" opacity="0.65" />
+                  <circle cx="90" cy="220" r="18" fill="#5C7A58" opacity="0.6" />
+                  <circle cx="200" cy="150" r="16" fill="#8EAA88" opacity="0.5" />
+                </svg>
+              </div>
+              <div class="card-info">
+                <p class="card-origin">Китай · Аньси</p>
+                <h2 class="card-name">Tie Guan Yin<br />Традиционный</h2>
+                <div class="card-row">
+                  <span class="card-price">1 290 ₽</span>
+                  <span class="card-weight">50 г</span>
+                </div>
+              </div>
+            </article>
+            <div class="card-face card-back">
+              <div>
+                <p class="back-tag">Улун · Средняя обжарка</p>
+                <h2 class="back-title">Tie Guan Yin Традиционный</h2>
+                <p class="back-desc">Улун с тысячелетней историей. Листья скручены в плотные шарики и слегка обжарены.
+                  При заваривании раскрываются медленно, с каждым проливом меняя характер.</p>
+              </div>
+              <div>
+                <div class="back-notes">
+                  <p class="notes-label">Ноты</p>
+                  <div class="notes-tags">
+                    <span class="note-tag">Орхидея</span>
+                    <span class="note-tag">Поджаренный рис</span>
+                    <span class="note-tag">Сухофрукты</span>
+                  </div>
+                </div>
+                <button class="back-btn">Добавить в корзину</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="card-wrap" tabindex="0" role="button" aria-label="Sheng Puer — подробнее">
+          <div class="card">
+            <article class="card-face card-front">
+              <div class="card-img">
+                <svg viewBox="0 0 280 340" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                  <rect width="280" height="340" fill="#C8B89A" />
+                  <circle cx="140" cy="170" r="110" fill="#B0A080" opacity="0.5" />
+                  <circle cx="140" cy="170" r="85" fill="#9A8A6A" opacity="0.4" />
+                  <circle cx="140" cy="170" r="60" fill="#886050" opacity="0.5" />
+                  <circle cx="140" cy="170" r="35" fill="#6A4838" opacity="0.6" />
+                  <circle cx="140" cy="170" r="12" fill="#4A3028" opacity="0.8" />
+                  <line x1="140" y1="60" x2="140" y2="280" stroke="#8A7860" stroke-width="0.5" opacity="0.5" />
+                  <line x1="30" y1="170" x2="250" y2="170" stroke="#8A7860" stroke-width="0.5" opacity="0.5" />
+                </svg>
+                <span class="card-badge">2019</span>
+              </div>
+              <div class="card-info">
+                <p class="card-origin">Китай · Юньнань</p>
+                <h2 class="card-name">Sheng Puer<br />Менхай Бин</h2>
+                <div class="card-row">
+                  <span class="card-price">3 400 ₽</span>
+                  <span class="card-weight">357 г</span>
+                </div>
+              </div>
+            </article>
+            <div class="card-face card-back">
+              <div>
+                <p class="back-tag">Пуэр · Выдержка 6 лет</p>
+                <h2 class="back-title">Sheng Puer Менхай Бин</h2>
+                <p class="back-desc">Прессованный блин из листьев старых деревьев региона Менхай. Живой чай: вкус
+                  трансформируется с годами. В этом урожае — уже сложившийся, но с потенциалом к ещё 20 годам хранения.
+                </p>
+              </div>
+              <div>
+                <div class="back-notes">
+                  <p class="notes-label">Ноты</p>
+                  <div class="notes-tags">
+                    <span class="note-tag">Кожа</span>
+                    <span class="note-tag">Табак</span>
+                    <span class="note-tag">Тёмные ягоды</span>
+                  </div>
+                </div>
+                <button class="back-btn">Добавить в корзину</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="card-wrap" tabindex="0" role="button" aria-label="Gyokuro — подробнее">
+          <div class="card">
+            <article class="card-face card-front">
+              <div class="card-img">
+                <svg viewBox="0 0 280 340" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                  <rect width="280" height="340" fill="#BBC89A" />
+                  <rect x="0" y="0" width="280" height="160" fill="#9AAA78" opacity="0.6" />
+                  <rect x="0" y="80" width="280" height="80" fill="#7A8A58" opacity="0.4" />
+                  <path d="M0 160 Q70 120 140 160 Q210 200 280 160 L280 340 L0 340Z" fill="#A8B880" opacity="0.5" />
+                  <rect x="60" y="20" width="4" height="140" fill="#5A6A40" opacity="0.7" rx="2" />
+                  <rect x="100" y="10" width="4" height="150" fill="#4A5A30" opacity="0.6" rx="2" />
+                  <rect x="140" y="15" width="4" height="145" fill="#5A6A40" opacity="0.65" rx="2" />
+                  <rect x="180" y="25" width="4" height="135" fill="#4A5A30" opacity="0.7" rx="2" />
+                  <rect x="220" y="20" width="4" height="140" fill="#506038" opacity="0.6" rx="2" />
+                </svg>
+              </div>
+              <div class="card-info">
+                <p class="card-origin">Япония · Удзи</p>
+                <h2 class="card-name">Gyokuro<br />Нефритовая роса</h2>
+                <div class="card-row">
+                  <span class="card-price">2 200 ₽</span>
+                  <span class="card-weight">30 г</span>
+                </div>
+              </div>
+            </article>
+            <div class="card-face card-back">
+              <div>
+                <p class="back-tag">Зелёный · Теневой</p>
+                <h2 class="back-title">Gyokuro Нефритовая роса</h2>
+                <p class="back-desc">Три недели до сбора кусты накрывают от солнца, что накапливает аминокислоты.
+                  Результат — насыщенный умами, почти бульонный вкус. Заваривается при 55–60 °C небольшими порциями.</p>
+              </div>
+              <div>
+                <div class="back-notes">
+                  <p class="notes-label">Ноты</p>
+                  <div class="notes-tags">
+                    <span class="note-tag">Морские водоросли</span>
+                    <span class="note-tag">Умами</span>
+                    <span class="note-tag">Сладкий горох</span>
+                  </div>
+                </div>
+                <button class="back-btn">Добавить в корзину</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 6 -->
+        <div class="card-wrap" tabindex="0" role="button" aria-label="Darjeeling First Flush — подробнее">
+          <div class="card">
+            <article class="card-face card-front">
+              <div class="card-img">
+                <svg viewBox="0 0 280 340" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                  <rect width="280" height="340" fill="#E8D0B8" />
+                  <path d="M0 240 Q90 180 180 220 Q230 240 280 200 L280 340 L0 340Z" fill="#C8A888" opacity="0.6" />
+                  <path d="M0 280 Q100 240 200 260 Q240 270 280 250 L280 340 L0 340Z" fill="#B89878" opacity="0.5" />
+                  <ellipse cx="80" cy="120" rx="50" ry="70" fill="#D4A870" opacity="0.5"
+                    transform="rotate(-20 80 120)" />
+                  <ellipse cx="160" cy="100" rx="45" ry="65" fill="#C89860" opacity="0.5"
+                    transform="rotate(15 160 100)" />
+                  <ellipse cx="210" cy="160" rx="35" ry="55" fill="#D0A868" opacity="0.4"
+                    transform="rotate(-10 210 160)" />
+                  <circle cx="200" cy="60" r="20" fill="#E8C890" opacity="0.4" />
+                </svg>
+                <span class="card-badge">FF 2025</span>
+              </div>
+              <div class="card-info">
+                <p class="card-origin">Индия · Дарджилинг</p>
+                <h2 class="card-name">Darjeeling<br />First Flush</h2>
+                <div class="card-row">
+                  <span class="card-price">1 980 ₽</span>
+                  <span class="card-weight">50 г</span>
+                </div>
+              </div>
+            </article>
+            <div class="card-face card-back">
+              <div>
+                <p class="back-tag">Чёрный · Мускатный</p>
+                <h2 class="back-title">Darjeeling First Flush</h2>
+                <p class="back-desc">Первый весенний сбор с плантации Маргарет Хоуп на высоте 1800 м. Лёгкий по
+                  окислению — почти улун. Знаменитый «мускатный» характер, который бывает только в этот короткий сезон.
+                </p>
+              </div>
+              <div>
+                <div class="back-notes">
+                  <p class="notes-label">Ноты</p>
+                  <div class="notes-tags">
+                    <span class="note-tag">Мускат</span>
+                    <span class="note-tag">Бергамот</span>
+                    <span class="note-tag">Весенние цветы</span>
+                  </div>
+                </div>
+                <button class="back-btn">Добавить в корзину</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 7 -->
+        <div class="card-wrap" tabindex="0" role="button" aria-label="Ali Shan Oolong — подробнее">
+          <div class="card">
+            <article class="card-face card-front">
+              <div class="card-img">
+                <svg viewBox="0 0 280 340" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                  <rect width="280" height="340" fill="#D0DBC8" />
+                  <path d="M30 280 Q100 160 180 200 Q240 230 260 150 Q240 260 200 320 Q130 350 30 280Z" fill="#A8C09A"
+                    opacity="0.6" />
+                  <path d="M80 100 Q140 60 200 120 Q160 160 100 140Z" fill="#90A882" opacity="0.7" />
+                  <path d="M50 180 Q110 130 170 170 Q140 210 80 200Z" fill="#8AB07C" opacity="0.6" />
+                  <circle cx="220" cy="90" r="25" fill="#A8C090" opacity="0.4" />
+                  <circle cx="40" cy="260" r="35" fill="#98B088" opacity="0.3" />
+                </svg>
+              </div>
+              <div class="card-info">
+                <p class="card-origin">Тайвань · Алишань</p>
+                <h2 class="card-name">Ali Shan<br />Высокогорный</h2>
+                <div class="card-row">
+                  <span class="card-price">1 560 ₽</span>
+                  <span class="card-weight">50 г</span>
+                </div>
+              </div>
+            </article>
+            <div class="card-face card-back">
+              <div>
+                <p class="back-tag">Улун · Лёгкая обжарка</p>
+                <h2 class="back-title">Ali Shan Высокогорный</h2>
+                <p class="back-desc">Выращен на высоте 1400 м в горах Алишань. Прохладный туманный климат замедляет
+                  рост, концентрируя аромат. Классика тайваньских улунов с молочной кремовой текстурой.</p>
+              </div>
+              <div>
+                <div class="back-notes">
+                  <p class="notes-label">Ноты</p>
+                  <div class="notes-tags">
+                    <span class="note-tag">Молочный крем</span>
+                    <span class="note-tag">Жасмин</span>
+                    <span class="note-tag">Масло</span>
+                  </div>
+                </div>
+                <button class="back-btn">Добавить в корзину</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 8 -->
+        <div class="card-wrap" tabindex="0" role="button" aria-label="Shou Puer — подробнее">
+          <div class="card">
+            <article class="card-face card-front">
+              <div class="card-img">
+                <svg viewBox="0 0 280 340" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                  <rect width="280" height="340" fill="#B0907A" />
+                  <rect x="0" y="0" width="280" height="340" fill="#8A6050" opacity="0.4" />
+                  <circle cx="140" cy="170" r="120" fill="#704030" opacity="0.3" />
+                  <rect x="50" y="80" width="180" height="180" rx="4" fill="#5A3020" opacity="0.25" />
+                  <rect x="70" y="100" width="140" height="140" rx="2" fill="#4A2818" opacity="0.2" />
+                  <path d="M60 80 L80 60 L200 60 L220 80 L220 260 L200 280 L80 280 L60 260Z" fill="none"
+                    stroke="#3A2010" stroke-width="1.5" opacity="0.5" />
+                  <text x="140" y="185" font-family="Georgia, serif" font-size="40" fill="#3A2010" opacity="0.3"
+                    text-anchor="middle" dominant-baseline="middle">茶</text>
+                </svg>
+                <span class="card-badge">Wet Storage</span>
+              </div>
+              <div class="card-info">
+                <p class="card-origin">Китай · Гуандун</p>
+                <h2 class="card-name">Shou Puer<br />Традиционный блин</h2>
+                <div class="card-row">
+                  <span class="card-price">890 ₽</span>
+                  <span class="card-weight">250 г</span>
+                </div>
+              </div>
+            </article>
+            <div class="card-face card-back">
+              <div>
+                <p class="back-tag">Пуэр · Шу · Влажное хранение</p>
+                <h2 class="back-title">Shou Puer Традиционный</h2>
+                <p class="back-desc">Классический «приготовленный» пуэр с влажным хранением — технология, ускоряющая
+                  ферментацию. Земляной, бархатистый, согревающий. Идеален для вечернего чаепития без кофеиновой
+                  нагрузки.</p>
+              </div>
+              <div>
+                <div class="back-notes">
+                  <p class="notes-label">Ноты</p>
+                  <div class="notes-tags">
+                    <span class="note-tag">Земля</span>
+                    <span class="note-tag">Чёрный гриб</span>
+                    <span class="note-tag">Сладкий финик</span>
+                  </div>
+                </div>
+                <button class="back-btn">Добавить в корзину</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /card-grid -->
+
+      <div class="strip">
+        <p class="strip-text">Каждый чай — это место, сезон и руки, которые его собрали.</p>
+        <a href="#" class="strip-link">Читать об источниках →</a>
+      </div>
+
+    </section>
+  </main>
+
+  <script>
+    // Filter buttons
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+
+    // Touch support: tap to flip
+    document.querySelectorAll('.card-wrap').forEach(wrap => {
+      wrap.addEventListener('click', () => {
+        if (window.matchMedia('(hover: none)').matches) {
+          wrap.classList.toggle('flipped');
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>

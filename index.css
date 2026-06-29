@@ -1,0 +1,690 @@
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    :root {
+        --bg: #F7F3EE;
+        --ink: #3D2B1F;
+        --ink-light: #7A6155;
+        --accent: #8B5E3C;
+        --accent-hi: #A5733F;
+        --sand: #C9A882;
+        --card-bg: #EDE7DF;
+        --card-dark: #1A1714;
+        --white: #FDFAF7;
+
+        --font-display: 'Cormorant Garamond', Georgia, serif;
+        --font-body: 'Inter', system-ui, sans-serif;
+
+        --space-xs: 0.25rem;
+        --space-s: 0.5rem;
+        --space-m: 1rem;
+        --space-l: 1.5rem;
+        --space-xl: 2.5rem;
+        --space-2xl: 4rem;
+        --space-3xl: 6rem;
+
+        --radius: 2px;
+        --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background: var(--bg);
+        color: var(--ink);
+        font-family: var(--font-body);
+        font-size: 15px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── HEADER ── */
+    .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: var(--space-l) var(--space-2xl);
+        border-bottom: 1px solid rgba(61, 43, 31, 0.12);
+    }
+
+    .logo {
+        font-family: var(--font-display);
+        font-size: 1.6rem;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        color: var(--ink);
+        text-decoration: none;
+    }
+
+    .logo span {
+        color: var(--accent);
+    }
+
+    .nav {
+        display: flex;
+        gap: var(--space-xl);
+        list-style: none;
+    }
+
+    .nav a {
+        font-size: 0.8rem;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--ink-light);
+        text-decoration: none;
+        transition: color var(--transition);
+    }
+
+    .nav a:hover {
+        color: var(--accent);
+    }
+
+    .header-cta {
+        display: flex;
+        align-items: center;
+        gap: var(--space-m);
+    }
+
+    .cart-btn {
+        background: none;
+        border: 1px solid rgba(61, 43, 31, 0.25);
+        border-radius: var(--radius);
+        padding: 0.45rem 1rem;
+        font-family: var(--font-body);
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--ink);
+        cursor: pointer;
+        transition: background var(--transition), color var(--transition), border-color var(--transition);
+    }
+
+    .cart-btn:hover {
+        background: var(--ink);
+        color: var(--white);
+        border-color: var(--ink);
+    }
+
+    /* ── CATALOG SECTION ── */
+    .catalog {
+        padding: var(--space-3xl) var(--space-2xl);
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    .catalog-header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: end;
+        gap: var(--space-m);
+        margin-bottom: var(--space-2xl);
+        padding-bottom: var(--space-l);
+        border-bottom: 1px solid rgba(61, 43, 31, 0.12);
+    }
+
+    .catalog-eyebrow {
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: var(--space-s);
+    }
+
+    .catalog-title {
+        font-family: var(--font-display);
+        font-size: clamp(2.2rem, 4vw, 3.4rem);
+        font-weight: 300;
+        line-height: 1.1;
+        color: var(--ink);
+    }
+
+    .catalog-title em {
+        font-style: italic;
+        color: var(--accent);
+    }
+
+    .catalog-meta {
+        font-size: 0.78rem;
+        color: var(--ink-light);
+        text-align: right;
+        line-height: 1.4;
+    }
+
+    .catalog-meta strong {
+        display: block;
+        font-size: 1.5rem;
+        font-family: var(--font-display);
+        font-weight: 400;
+        color: var(--ink);
+        line-height: 1;
+    }
+
+    /* ── FILTERS ── */
+    .filters {
+        display: flex;
+        gap: var(--space-s);
+        margin-bottom: var(--space-xl);
+        flex-wrap: wrap;
+    }
+
+    .filter-btn {
+        background: none;
+        border: 1px solid rgba(61, 43, 31, 0.2);
+        border-radius: 100px;
+        padding: 0.35rem 1rem;
+        font-family: var(--font-body);
+        font-size: 0.75rem;
+        font-weight: 400;
+        letter-spacing: 0.05em;
+        color: var(--ink-light);
+        cursor: pointer;
+        transition: all var(--transition);
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+        background: var(--ink);
+        border-color: var(--ink);
+        color: var(--white);
+    }
+
+    /* ── GRID ── */
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--space-l);
+    }
+
+    /* ── FLIP CARD ── */
+    .card-wrap {
+        perspective: 900px;
+    }
+
+    .card {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 3 / 5;
+        transform-style: preserve-3d;
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
+    }
+
+    .card-wrap:hover .card {
+        transform: rotateY(180deg);
+    }
+
+    .card-face {
+        position: absolute;
+        inset: 0;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        transform: translateZ(1px);
+        -webkit-transform: translateZ(1px);
+        border-radius: var(--radius);
+        overflow: hidden;
+    }
+
+    /* FRONT */
+    .card-front {
+        background: var(--card-bg);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-img {
+        flex: 1;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .card-img svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    .card-badge {
+        position: absolute;
+        top: var(--space-m);
+        left: var(--space-m);
+        background: var(--accent);
+        color: var(--white);
+        font-size: 0.62rem;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 0.2rem 0.55rem;
+        border-radius: 100px;
+    }
+
+    .card-info {
+        padding: var(--space-m) var(--space-l) var(--space-l);
+        background: var(--card-bg);
+    }
+
+    .card-origin {
+        font-size: 0.65rem;
+        font-weight: 500;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--sand);
+        margin-bottom: var(--space-xs);
+    }
+
+    .card-name {
+        font-family: var(--font-display);
+        font-size: 1.35rem;
+        font-weight: 400;
+        line-height: 1.2;
+        color: var(--ink);
+        margin-bottom: var(--space-s);
+    }
+
+    .card-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-s);
+    }
+
+    .card-price {
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--ink);
+    }
+
+    .card-weight {
+        font-size: 0.72rem;
+        color: var(--ink-light);
+    }
+
+    /* BACK */
+    .card-back {
+        background: var(--card-dark);
+        transform: rotateY(180deg);
+
+        display: grid;
+        grid-template-rows: 1fr auto;
+
+        padding: var(--space-xl) var(--space-l) var(--space-l);
+
+        color: var(--white);
+    }
+
+    .back-tag {
+        font-size: 0.62rem;
+        font-weight: 500;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--sand);
+        margin-bottom: var(--space-m);
+    }
+
+    .back-title {
+        font-family: var(--font-display);
+        font-size: 1.6rem;
+        font-weight: 300;
+        line-height: 1;
+        color: var(--white);
+        margin-bottom: var(--space-m);
+    }
+
+    .back-desc {
+        font-size: .75rem;
+        line-height: 1.45;
+
+        display: block;
+        overflow: visible;
+    }
+
+    .back-notes {
+        margin-top: var(--space-m);
+        padding-top: var(--space-m);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .notes-label {
+        font-size: 0.62rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--sand);
+        margin-bottom: var(--space-xs);
+    }
+
+    .notes-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-xs);
+    }
+
+    .note-tag {
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.75);
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 100px;
+        padding: 0.15rem 0.55rem;
+    }
+
+    .back-btn {
+        display: block;
+        width: 100%;
+        margin-top: var(--space-m);
+
+        background: var(--accent);
+        border: none;
+        border-radius: var(--radius);
+        padding: .85rem;
+
+        font-family: var(--font-body);
+        font-size: .75rem;
+        font-weight: 500;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+        color: var(--white);
+
+        cursor: pointer;
+        transition: background var(--transition), transform .15s;
+    }
+
+    .back-btn:hover {
+        background: var(--accent-hi);
+    }
+
+    .back-btn:active {
+        transform: scale(0.98);
+    }
+
+    /* ── FOOTER STRIP ── */
+    .strip {
+        margin-top: var(--space-3xl);
+        padding: var(--space-xl) var(--space-2xl);
+        border-top: 1px solid rgba(61, 43, 31, 0.12);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-l);
+        flex-wrap: wrap;
+    }
+
+    .strip-text {
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        font-weight: 300;
+        font-style: italic;
+        color: var(--ink-light);
+    }
+
+    .strip-link {
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+        text-decoration: none;
+        border-bottom: 1px solid var(--sand);
+        padding-bottom: 1px;
+        transition: color var(--transition), border-color var(--transition);
+    }
+
+    .strip-link:hover {
+        color: var(--ink);
+        border-color: var(--ink);
+    }
+
+    /* ── RESPONSIVE ── */
+
+    /* DESKTOP: min-width 1024px — базовые стили уже для десктопа */
+
+    /* TABLET: 768px – 1023px */
+    @media (min-width: 900px) and (max-width: 1023px) {
+        .site-header {
+            padding: var(--space-m) var(--space-l);
+            gap: var(--space-m);
+        }
+
+        .nav {
+            gap: var(--space-l);
+        }
+
+        .nav a {
+            font-size: 0.72rem;
+        }
+
+        .catalog {
+            padding: var(--space-2xl) var(--space-l);
+        }
+
+        .catalog-header {
+            grid-template-columns: 1fr;
+            gap: var(--space-s);
+            margin-bottom: var(--space-xl);
+        }
+
+        .catalog-meta {
+            text-align: left;
+        }
+
+        /* 2 колонки на планшете */
+        .card-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-l);
+        }
+
+        .card {
+            aspect-ratio: 3 / 4.1;
+        }
+
+        .card-face {
+            position: absolute;
+            inset: 0;
+        }
+
+        .card-front {
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+
+        .card-img {
+            flex: none;
+            height: 200px;
+        }
+
+        .card-back {
+            padding: 1.25rem;
+        }
+
+        .back-title {
+            font-size: 1.3rem;
+            margin-bottom: .5rem;
+        }
+
+        .back-desc {
+            font-size: 1.5rem;
+            line-height: 1.5;
+            height: 100%;
+            display: block;
+            overflow: visible;
+        }
+
+        .back-notes {
+            margin-top: .75rem;
+            padding-top: .75rem;
+        }
+
+        .back-tag {
+            margin-bottom: var(--space-s);
+        }
+
+        .back-btn {
+            margin-top: .75rem;
+            padding: .75rem;
+        }
+
+        .strip {
+            padding: var(--space-xl) var(--space-l);
+            flex-direction: column;
+            align-items: flex-start;
+            gap: var(--space-m);
+            margin-top: var(--space-2xl);
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 899px) {
+
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-m);
+    }
+
+    .card {
+        aspect-ratio: 3 / 4.1; /* было 3/3 — это ломало высоту */
+    }
+
+    .card-img {
+        height: 170px; /* меньше чем 200px */
+    }
+
+    .card-back {
+        padding: 1rem;
+    }
+
+    .back-title {
+        font-size: 1.1rem;
+        margin-bottom: .4rem;
+    }
+
+    .back-desc {
+        font-size: .75rem;
+        line-height: 1.45;
+
+        display: block;
+        overflow: visible;
+    }
+
+    .back-notes {
+        margin-top: .6rem;
+        padding-top: .6rem;
+    }
+
+    .back-btn {
+        margin-top: .6rem;
+        padding: .7rem;
+        font-size: .7rem;
+    }
+
+    .strip {
+        gap: var(--space-s);
+    }
+}
+
+    /* MOBILE: max-width 767px */
+    @media (min-width:531px) and (max-width: 767px) {
+
+    .card-grid {
+        grid-template-columns: 1fr; /* важно: убираем 2 колонки */
+        gap: var(--space-s);
+    }
+
+    .card {
+        aspect-ratio: 3 / 3.6;
+    }
+
+    .card-img {
+        height: 160px;
+    }
+
+    .card-name {
+        font-size: 0.9rem;
+    }
+
+    .card-price {
+        font-size: 0.85rem;
+    }
+
+    .card-back {
+        padding: 0.8rem;
+    }
+
+    .back-title {
+        font-size: 0.95rem;
+    }
+
+    .back-desc {
+        font-size: 0.7rem;
+        line-height: 1.35;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+}
+
+    @media (max-width: 530px) {
+
+    .card-grid {
+        grid-template-columns: 1fr; /* важно: убираем 2 колонки */
+        gap: var(--space-s);
+    }
+
+    .card {
+        aspect-ratio: 3 / 3.6;
+    }
+
+    .card-img {
+        height: 160px;
+    }
+
+    .card-name {
+        font-size: 0.9rem;
+    }
+
+    .card-price {
+        font-size: 0.85rem;
+    }
+
+    .card-back {
+        padding: 0.8rem;
+    }
+
+    .back-title {
+        font-size: 0.95rem;
+    }
+
+    .back-desc {
+        font-size: 0.7rem;
+        line-height: 1.35;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+}
+
+    @media (prefers-reduced-motion: reduce) {
+        .card {
+            transition: none;
+        }
+    }
+
+    /* Touch на десктопе: tap to flip */
+    @media (min-width: 1024px) and (hover: none) {
+
+        .card-wrap:focus-within .card,
+        .card-wrap.flipped .card {
+            transform: rotateY(180deg);
+        }
+    }
